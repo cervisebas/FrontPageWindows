@@ -1,0 +1,72 @@
+div#ImageProfile {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    h2 {
+        position: absolute;
+        left: 60px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-weight: normal;
+        font-size: 64px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+
+    }
+    div.profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 8px;
+        background-color: transparent;
+        transition: background-color 0.01s linear;
+        h3 {
+            color: #FFFFFF;
+            margin-right: 24px;
+            font-weight: normal;
+            font-size: 24px;
+        }
+        div.image {
+            width: 60px;
+            height: 60px;
+            background-color: #000000;
+            background-image: url('../Assets/userimage.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: backgroundMove 20s linear infinite;
+        }
+    }
+    div.shutdown {
+        background-image: url('../Assets/shutdown.webp');
+    }
+    div.icon.search {
+        background-image: url('../Assets/gosearch.webp');
+        margin-right: 60px;
+    }
+    div.icon {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-size: 60%;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: transparent;
+        transition: background-color 0.01s linear;
+    }
+    div.icon:hover, div.profile:hover {
+        background-color: rgba($color: #FFFFFF, $alpha: 0.3);
+    }
+    div.icon:active, div.profile:active {
+        background-color: rgba($color: #FFFFFF, $alpha: 0.6);
+    }
+}

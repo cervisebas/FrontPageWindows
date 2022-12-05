@@ -1,0 +1,75 @@
+div#Menu {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 178px);
+    margin-top: -20px;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;*/
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    padding-left: 10px;
+    align-items: start;
+}
+
+// Scrollbar
+div#Menu::-webkit-scrollbar {
+    background-color: rgba($color: #FFFFFF, $alpha: 0.3);
+    height: 16px;
+}
+div#Menu::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #CDCDCD, $alpha: 0.8);
+    border-radius: 1px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+div#Menu::-webkit-scrollbar-thumb:hover {
+    background-color: rgba($color: #b8b8b8, $alpha: 0.8);
+}
+div#Menu::-webkit-scrollbar-thumb:active {
+    background-color: rgba($color: #999999, $alpha: 0.8);
+}
+
+div#Menu::-webkit-scrollbar-button:single-button {
+    background-color: rgba($color: #FFFFFF, $alpha: 0.6);
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+div#Menu::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    height: 12px;
+    width: 12px;
+    background-position: 3px 3px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,50 50,100 50,0'/></svg>");
+
+}
+div#Menu::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+div#Menu::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+div#Menu::-webkit-scrollbar-button:single-button:horizontal:increment {
+    height: 12px;
+    width: 12px;
+    background-position: 3px 3px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+div#Menu::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+div#Menu::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
